@@ -1,12 +1,13 @@
+# Uncomment this line to define a global platform for your project
 platform :ios, '15.0'
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
-ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+ENV['COCOAPODS_DISABLE_STATS'] = '1'
 
 project 'Runner', {
   'Debug' => :debug,
-  'Profile' => :release,
   'Release' => :release,
+  'Profile' => :profile,
 }
 
 def flutter_root
@@ -22,15 +23,13 @@ def flutter_root
   raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Try running flutter pub get"
 end
 
-require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper.rb'), flutter_root)
-
-flutter_ios_podfile_setup
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
 
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  install_all_flutter_pods
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 
 post_install do |installer|
