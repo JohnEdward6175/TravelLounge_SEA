@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:my_app/provider/chat_provider.dart';
 import 'dashboard.dart';
 import 'package:flutter/foundation.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:my_app/dataHandler/diary_data.dart';
 import 'package:my_app/dataHandler/user_model.dart';
@@ -47,7 +47,7 @@ void main() async {
   }
     await Hive.openBox<DocumentList>('myDocuments');
   if (!kIsWeb) {
-    await MobileAds.instance.initialize();
+    // await MobileAds.instance.initialize();
   }
 
     // 3. Open all boxes
