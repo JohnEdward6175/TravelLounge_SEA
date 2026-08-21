@@ -1,0 +1,12 @@
+# Build folders
+build/
+.dart_tool/
+.pub-cache/
+.packages
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/

@@ -1,0 +1,1004 @@
+name: my_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  image_picker: ^1.0.7  # Or latest version
+  path_provider: ^2.1.2
+
+  path: ^1.9.0
+  audioplayers: ^6.0.0
+  video_player: ^2.9.0
+
+  geolocator: ^13.0.1
+  http: ^1.2.0
+
+  collection: ^1.17.0
+  shared_preferences: ^2.3.0
+  flutter_local_ai: ^0.0.6
+  cupertino_icons: ^1.0.8
+  intl: ^0.18.1
+  google_mobile_ads: ^5.0.0
+  provider: ^6.1.5+1
+
+  flutter_map: ^7.0.0
+  latlong2: ^0.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  # 1. Add this package to generate the icons
+  flutter_launcher_icons: ^0.13.1
+
+  build_runner: ^2.4.8
+  hive_generator: ^2.0.1
+
+# 2. Add this configuration block
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: images/AppLogo.jpg"
+  min_sdk_android: 21 
+  # For modern Android "Adaptive Icons"
+  adaptive_icon_background: "#FFFFFF" 
+  adaptive_icon_foreground: images/AppLogo.jpg"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - sounds/click.mp3
+
+    #video ads
+    - videos/cola.mp4
+    - videos/pancit.mp4
+    - videos/spice.mp4
+
+    #ads
+    - images/ads/coke.jpg
+    - images/ads/priceless.webp
+    - images/ads/jollibee.jpg
+    - images/ads/lazada.png
+    - images/ads/smart.png
+
+    - images/maps/BR.jpg
+    - images/maps/Cam.jpg
+    - images/maps/Indo.jpg
+    - images/maps/Laos.jpg
+    - images/maps/Malay.png
+    - images/maps/Myan.jpg
+    - images/maps/ph.jpg
+    - images/maps/SG.jpg
+    - images/maps/Thai.jpg
+    - images/maps/TL.jpg
+    - images/maps/Viet.jpg
+    - images/maps/SEA.jpg
+    - images/loginSpace.png
+    - images/AppLogo.jpg
+
+    #proponents
+    - images/proponents/dot.jpg
+    - images/proponents/ed.jpg
+    - images/proponents/ken.jpg
+    - images/proponents/lex.jpg
+
+    # landmarks
+    # - images/Brunei/BNINI/
+    - images/Brunei/BNINI/BNINI1.jpeg
+    - images/Brunei/BNINI/BNINI2.jpg
+    - images/Brunei/BNINI/BNINI3.jpg
+
+    # - images/Brunei/BNJAHBM/
+    - images/Brunei/BNJAHBM/BNJAHBM1.jpg
+    - images/Brunei/BNJAHBM/BNJAHBM2.jpg
+    - images/Brunei/BNJAHBM/BNJAHBM3.jpg
+
+    #- images/Brunei/BNJP/
+    - images/Brunei/BNJP/BNJP1.jpeg
+    - images/Brunei/BNJP/BNJP2.jpg
+    - images/Brunei/BNJP/BNJP3.jpg
+
+    # - images/Brunei/BNKA/
+    - images/Brunei/BNKA/BNKA1.jpg
+    - images/Brunei/BNKA/BNKA2.jpg
+    - images/Brunei/BNKA/BNKA3.jpg
+
+    #- images/Brunei/BNM/
+    - images/Brunei/BNM/BNM1.jpg
+    -  images/Brunei/BNM/BNM2.jpeg
+    -  images/Brunei/BNM/BNM3.jpeg
+    
+    #- images/Brunei/BNRRM/
+    - images/Brunei/BNRRM/BNRRM1.jpeg
+    - images/Brunei/BNRRM/BNRRM2.jpg
+    - images/Brunei/BNRRM/BNRRM3.jpg
+
+    # - images/Brunei/BNSOASM/
+    - images/Brunei/BNSOASM/BNSOASM1.jpg
+    - images/Brunei/BNSOASM/BNSOASM2.jpeg
+    - images/Brunei/BNSOASM/BNSOASM3.jpg
+
+    #- images/Brunei/BNTLRP/
+    - images/Brunei/BNTLRP/BNTLRP1.png
+    - images/Brunei/BNTLRP/BNTLRP2.jpg
+    - images/Brunei/BNTLRP/BNTLRP3.jpg
+
+    # - images/Brunei/BNUTNP/
+    - images/Brunei/BNUTNP/BNUTNP1.jpg
+    - images/Brunei/BNUTNP/BNUTNP2.jpg
+    - images/Brunei/BNUTNP/BNUTNP3.jpeg
+
+    # - images/Brunei/BNMB/
+    - images/Brunei/BNMB/BNMB1.jpg
+    - images/Brunei/BNMB/BNMB2.jpg
+    - images/Brunei/BNMB/BNMB3.jpg
+
+    # CAMBODIA LANDMARKS
+    #- images/Cambodia/KHAT/
+    - images/Cambodia/KHAT/KHAT1.jpg
+    - images/Cambodia/KHAT/KHAT2.jpg
+    - images/Cambodia/KHAT/KHAT3.jpg
+
+    #- images/Cambodia/KHAW/
+    - images/Cambodia/KHAW/KHAW1.jpg
+    - images/Cambodia/KHAW/KHAW2.jpg
+    - images/Cambodia/KHAW/KHAW3.jpg
+
+    #- images/Cambodia/KHBHS/
+    - images/Cambodia/KHBHS/KHBHS1.webp
+    - images/Cambodia/KHBHS/KHBHS2.jpg
+    - images/Cambodia/KHBHS/KHBHS3.webp
+
+    #- images/Cambodia/KHBT/
+    - images/Cambodia/KHBT/KHBT1.jpg
+    - images/Cambodia/KHBT/KHBT2.jpg
+    - images/Cambodia/KHBT/KHBT3.jpg
+
+    #- images/Cambodia/KHPKNP/
+    - images/Cambodia/KHPKNP/KHPKNP1.jpg
+    - images/Cambodia/KHPKNP/KHPKNP2.jpg
+    - images/Cambodia/KHPKNP/KHPKNP3.jpg
+
+    #- images/Cambodia/KHPPRP/
+    - images/Cambodia/KHPPRP/KHPPRP1.jpg
+    - images/Cambodia/KHPPRP/KHPPRP2.jpg
+    - images/Cambodia/KHPPRP/KHPPRP4.jpg
+
+    #- images/Cambodia/KHPVT/
+    - images/Cambodia/KHPVT/KHPVT1.avif
+    - images/Cambodia/KHPVT/KHPVT2.jpg
+    - images/Cambodia/KHPVT/KHPVT3.jpg
+
+    #- images/Cambodia/KHSP/
+    - images/Cambodia/KHSP/KHSP1.jpg
+    - images/Cambodia/KHSP/KHSP2.jpg
+    - images/Cambodia/KHSP/KHSP3.jpg
+
+    #- images/Cambodia/KHTP/
+    - images/Cambodia/KHTP/KHTP1.jpg
+    - images/Cambodia/KHTP/KHTP2.jpg
+    - images/Cambodia/KHTP/KHTP3.jpg
+
+    #- images/Cambodia/KHTSL/
+    - images/Cambodia/KHTSL/KHTSL1.webp
+    - images/Cambodia/KHTSL/KHTSL2.jpg
+    - images/Cambodia/KHTSL/KHTSL3.jpg
+
+    # INDONESIA LANDMARKS
+    #- images/Indonesia/IDBali/
+    - images/Indonesia/IDBali/IDBali1.jpg
+    - images/Indonesia/IDBali/IDBali2.jpg
+    - images/Indonesia/IDBali/IDBali3.jpg
+
+    #- images/Indonesia/IDBT/
+    - images/Indonesia/IDBT/IDBT1.webp
+    - images/Indonesia/IDBT/IDBT2.webp
+    - images/Indonesia/IDBT/IDBT3.jpg
+
+    #- images/Indonesia/IDJNM/
+    - images/Indonesia/IDJNM/IDJNM1.jpg
+    - images/Indonesia/IDJNM/IDJNM2.jpg
+    - images/Indonesia/IDJNM/IDJNM3.jpg
+
+    #- images/Indonesia/IDKNP/
+    - images/Indonesia/IDKNP/IDKNP1.jpeg
+    - images/Indonesia/IDKNP/IDKNP2.jpg
+    - images/Indonesia/IDKNP/IDKNP3.jpg
+
+    #- images/Indonesia/IDLT/
+    - images/Indonesia/IDLT/IDLT1.jpg
+    - images/Indonesia/IDLT/IDLT2.webp
+    - images/Indonesia/IDLT/IDLT3.avif
+
+    #- images/Indonesia/IDMB/
+    - images/Indonesia/IDMB/IDMB1.jpeg
+    - images/Indonesia/IDMB/IDMB2.jpg
+    - images/Indonesia/IDMB/IDMB3.jpg
+
+    #- images/Indonesia/IDMR/
+    - images/Indonesia/IDMR/IDMR1.webp
+    - images/Indonesia/IDMR/IDMR2.jpg
+    - images/Indonesia/IDMR/IDMR3.jpg
+
+    #- images/Indonesia/IDPT/
+    - images/Indonesia/IDPT/IDPT1.jpeg
+    - images/Indonesia/IDPT/IDPT2.jpg
+    - images/Indonesia/IDPT/IDPT3.jpg
+
+    #- images/Indonesia/IDRA/
+    - images/Indonesia/IDRA/IDRA1.jpg
+    - images/Indonesia/IDRA/IDRA2.webp
+    - images/Indonesia/IDRA/IDRA3.jpg
+
+    #- images/Indonesia/IDTT/
+    - images/Indonesia/IDTT/IDTT1.jpg
+    - images/Indonesia/IDTT/IDTT2.jpg
+    - images/Indonesia/IDTT/IDTT3.jpg  
+
+    # LAOS LANDMARKS
+    #- images/Laos/LABP/
+    - images/Laos/LABP/LABP1.jpeg
+    - images/Laos/LABP/LABP2.webp
+    - images/Laos/LABP/LABP3.jpeg
+
+    #- images/Laos/LACOPE/
+    - images/Laos/LACOPE/LACOPE1.jpg
+    - images/Laos/LACOPE/LACOPE2.jpg
+    - images/Laos/LACOPE/LACOPE3.jpg
+
+    # - images/Laos/LAPand/
+    - images/Laos/LALPand/LALPand1.jpg
+    - images/Laos/LALPand/LALPand2.jpg
+    - images/Laos/LALPand/LALPand3.jpg
+
+    #- images/Laos/LALPNM/
+    - images/Laos/LALPNM/LALPNM1.webp
+    - images/Laos/LALPNM/LALPNM2.webp
+    - images/Laos/LALPNM/LALPNM3.jpg
+
+    #- images/Laos/LAMP/
+    - images/Laos/LAMP/LAMP1.webp
+    - images/Laos/LAMP/LAMP2.jpg
+    - images/Laos/LAMP/LAMP3.jpg
+
+    #- images/Laos/LAP/
+    - images/Laos/LAP/LAP1.jfif
+    - images/Laos/LAP/LAP2.jpg
+    - images/Laos/LAP/LAP3.jpg
+
+    #- images/Laos/LAPTL/
+    - images/Laos/LAPTL/LAPTL1.jpg
+    - images/Laos/LAPTL/LAPTL2.jpg
+    - images/Laos/LAPTL/LAPTL3.jpg
+
+    #- images/Laos/LAVP
+    - images/Laos/LAVP/LAVP1.jpg
+    - images/Laos/LAVP/LAVP2.jpg
+    - images/Laos/LAVP/LAVP3.png
+
+    #- images/Laos/LAWS/
+    - images/Laos/LAWS/LAWS1.jpg
+    - images/Laos/LAWS/LAWS2.jpg
+    - images/Laos/LAWS/LAWS3.jpg
+
+    - images/Laos/LAWXT/
+    - images/Laos/LAWXT/LAWXT1.jpg
+    - images/Laos/LAWXT/LAWXT2.jpg
+    - images/Laos/LAWXT/LAWXT3.png
+
+
+    # MALAYSIA LANDMARKS
+    #- images/Malaysia/MYBC
+    - images/Malaysia/MYBC/batu.jpg
+    - images/Malaysia/MYBC/MYBC1.jpg
+    - images/Malaysia/MYBC/MYBC3.avif
+
+    #- images/Malaysia/MYCH
+    - images/Malaysia/MYCH/MYCH1.jpg
+    - images/Malaysia/MYCH/MYCH2.jpg
+    - images/Malaysia/MYCH/MYCH3.jpg
+
+    #- images/Malaysia/MYGT
+    - images/Malaysia/MYGT/MYGT1.avif
+    - images/Malaysia/MYGT/MYGT2.jpg
+    - images/Malaysia/MYGT/MYGT3.jpg
+
+    #- images/Malaysia/MYLSB
+    - images/Malaysia/MYLSB/MYLSB1.jpg
+    - images/Malaysia/MYLSB/MYLSB2.webp
+    - images/Malaysia/MYLSB/MYLSB3.jpg
+
+    #- images/Malaysia/MYMK
+    - images/Malaysia/MYMK/MYMK1.jpg
+    - images/Malaysia/MYMK/MYMK2.jpg
+    - images/Malaysia/MYMK/MYMK3.jpg
+
+    #- images/Malaysia/MYMS
+    - images/Malaysia/MYMS/MYMS1.webp
+    - images/Malaysia/MYMS/MYMS2.jfif
+    - images/Malaysia/MYMS/MYMS3.jpg
+
+    #- images/Malaysia/MYMSM
+    - images/Malaysia/MYMSM/MYMSM1.webp
+    - images/Malaysia/MYMSM/MYMSM2.webp
+    - images/Malaysia/MYMSM/MYMSM3.jpg
+
+    #- images/Malaysia/MYPTT
+    - images/Malaysia/MYPTT/MYPTT1.jpg
+    - images/Malaysia/MYPTT/MYPTT2.jpg
+    - images/Malaysia/MYPTT/MYPTT3.jpg
+
+    #- images/Malaysia/MYSI
+    - images/Malaysia/MYSI/MYSI1.jpg
+    - images/Malaysia/MYSI/MYSI2.jpg
+    - images/Malaysia/MYSI/MYSI3.jpg
+
+    #- images/Malaysia/MYTHT
+    - images/Malaysia/MYTHT/MYTHT1.jpg
+    - images/Malaysia/MYTHT/MYTHT2.jpg
+    - images/Malaysia/MYTHT/MYTHT3.webp
+
+    # MYANMAR LANDMARKS
+    #- images/Myanmar/MMB/
+    - images/Myanmar/MMB/MMB1.jpg
+    - images/Myanmar/MMB/MMB2.jpeg
+    - images/Myanmar/MMB/MMB3.jpg
+
+    #- images/Myanmar/MMGV/
+    - images/Myanmar/MMGV/MMGV1.jpg
+    - images/Myanmar/MMGV/MMGV2.jpg
+    - images/Myanmar/MMGV/MMGV3.jpg
+
+    #- images/Myanmar/MMHA/
+    - images/Myanmar/MMHA/MMHA1.jpg
+    - images/Myanmar/MMHA/MMHA2.jpg
+    - images/Myanmar/MMHA/MMHA3.jpg
+
+    #- images/Myanmar/MMIL/
+    - images/Myanmar/MMIL/MMIL1.jpg
+    - images/Myanmar/MMIL/MMIL2.webp
+    - images/Myanmar/MMIL/MMIL3.jpg
+
+    #- images/Myanmar/MMKP/
+    - images/Myanmar/MMKP/MMKP1.jpg
+    - images/Myanmar/MMKP/MMKP2.jpg
+    - images/Myanmar/MMKP/MMKP3.jpg
+
+    #- images/Myanmar/MMMA/
+    - images/Myanmar/MMMA/MMMA1.jpg
+    - images/Myanmar/MMMA/MMMA2.jpg
+    - images/Myanmar/MMMA/MMMA3.jpg
+
+    #- images/Myanmar/MMMing/
+    - images/Myanmar/MMMing/MMMing1.jpg
+    - images/Myanmar/MMMing/MMMing2.jpg
+    - images/Myanmar/MMMing/MMMing3.jpg
+
+    #- images/Myanmar/MMMP/
+    - images/Myanmar/MMMP/MMMP1.jpg
+    - images/Myanmar/MMMP/MMMP2.jpg
+    - images/Myanmar/MMMP/MMMP3.jpeg
+
+    #- images/Myanmar/MMSP/
+    - images/Myanmar/MMSP/MMSP1.JPG
+    - images/Myanmar/MMSP/MMSP2.jpeg
+    - images/Myanmar/MMSP/MMSP3.jpg
+
+    #- images/Myanmar/MMTACAA/
+    - images/Myanmar/MMTACAA/MMTACAA1.jpg
+    - images/Myanmar/MMTACAA/MMTACAA2.jpg
+    - images/Myanmar/MMTACAA/MMTACAA3.webp
+
+    # PHILIPPINES LANDMARKS
+    #- images/Philippines/PHBB/
+    - images/Philippines/PHBB/PHBB1.jpg
+    - images/Philippines/PHBB/PHBB2.webp
+    - images/Philippines/PHBB/PHBB3.jpg
+
+    #- images/Philippines/PHBRT/
+    - images/Philippines/PHBRT/PHBRT1.avif
+    - images/Philippines/PHBRT/PHBRT2.jpg
+    - images/Philippines/PHBRT/PHBRT3.jpg
+
+    #- images/Philippines/PHCH/
+    - images/Philippines/PHCH/PHCH1.jpg
+    - images/Philippines/PHCH/PHCH2.webp
+    - images/Philippines/PHCH/PHCH3.png
+
+    #- images/Philippines/PHFS/
+    - images/Philippines/PHFS/PHFS1.jpg
+    - images/Philippines/PHFS/PHFS2.jpeg
+    - images/Philippines/PHFS/PHFS3.jpg
+
+    #- images/Philippines/PHI/
+    - images/Philippines/PHI/PHI1.png
+    - images/Philippines/PHI/PHI2.jpg
+    - images/Philippines/PHI/PHI3.jpg
+
+    #- images/Philippines/PHMV/
+    - images/Philippines/PHMV/PHMV1.png
+    - images/Philippines/PHMV/PHMV2.jpg
+    - images/Philippines/PHMV/PHMV3.avif
+
+    #- images/Philippines/PHRP/
+    - images/Philippines/PHRP/PHRP1.png
+    - images/Philippines/PHRP/PHRP2.jpg
+    - images/Philippines/PHRP/PHRP3.jpg
+
+    #- images/Philippines/PHSAC/
+    - images/Philippines/PHSAC/PHSAC1.jpg
+    - images/Philippines/PHSAC/PHSAC2.jpg
+    - images/Philippines/PHSAC/PHSAC3.jpg
+
+    #- images/Philippines/PHTV/
+    - images/Philippines/PHTV/PHTV1.jpg
+    - images/Philippines/PHTV/PHTV2.jpg
+    - images/Philippines/PHTV/PHTV3.jpeg
+
+    #- images/Philippines/PHVC/
+    - images/Philippines/PHVC/PHVC1.jpg
+    - images/Philippines/PHVC/PHVC2.jpg
+    - images/Philippines/PHVC/PHVC3.webp
+
+    # SINGAPORE LANDMARKS
+    #- images/Singapore/SGCQ/
+    - images/Singapore/SGCQ/SGCQ1.jpg
+    - images/Singapore/SGCQ/SGCQ2.avif
+    - images/Singapore/SGCQ/SGCQ3.avif
+
+    #- images/Singapore/SGGbyB/
+    - images/Singapore/SGGbyB/SGGbyB1.jpg
+    - images/Singapore/SGGbyB/SGGbyB2.jpg
+    - images/Singapore/SGGbyB/SGGbyB3.jpg
+
+    #- images/Singapore/SGHW/
+    - images/Singapore/SGHW/SGHW1.jpg
+    - images/Singapore/SGHW/SGHW2.jpg
+    - images/Singapore/SGHW/SGHW3.jpg
+
+    #- images/Singapore/SGKWM/
+    - images/Singapore/SGKWM/SGKWM1.jpg
+    - images/Singapore/SGKWM/SGKWM2.jpg
+    - images/Singapore/SGKWM/SGKWM3.jpg
+
+    #- images/Singapore/SGMP/
+    - images/Singapore/SGMP/SGMP1.jpg
+    - images/Singapore/SGMP/SGMP2.jpg
+    - images/Singapore/SGMP/SGMP3.jpg
+
+    #- images/Singapore/SGRLS/
+    - images/Singapore/SGRLS/SGRLS1.jpg
+    - images/Singapore/SGRLS/SGRLS2.jpg
+    - images/Singapore/SGRLS/SGRLS3.jpg
+
+    #- images/Singapore/SGSBG/
+    - images/Singapore/SGSBG/SGSBG1.jpg
+    - images/Singapore/SGSBG/SGSBG2.jpg
+    - images/Singapore/SGSBG/SGSBG3.webp
+
+    #- images/Singapore/SGSG/
+    - images/Singapore/SGSG/SGSG1.jpg
+    - images/Singapore/SGSG/SGSG2.jpg
+    - images/Singapore/SGSG/SGSG3.jpg
+
+    #- images/Singapore/SGSM/
+    - images/Singapore/SGSM/SGSM1.jpg
+    - images/Singapore/SGSM/SGSM2.jpeg
+    - images/Singapore/SGSM/SGSM3.jpg
+
+    #- images/Singapore/SGSS/
+    - images/Singapore/SGSS/SGSS1.jpg
+    - images/Singapore/SGSS/SGSS2.avif
+    - images/Singapore/SGSS/SGSS3.jpg
+
+    # THAILAND LANDMARKS
+    #- images/Thailand/THAHP/
+    - images/Thailand/THAHP/THAHP1.jpg
+    - images/Thailand/THAHP/THAHP2.jpg
+    - images/Thailand/THAHP/THAHP3.jpeg
+
+    #- images/Thailand/THBORK
+    - images/Thailand/THBORK/THBORK1.webp
+    - images/Thailand/THBORK/THBORK2.webp
+    - images/Thailand/THBORK/THBORK3.webp
+
+    #- images/Thailand/THCMOC
+    - images/Thailand/THCMOC/THCMOC1.png
+    - images/Thailand/THCMOC/THCMOC2.jpg
+    - images/Thailand/THCMOC/THCMOC3.jpg
+
+    #- images/Thailand/THDI
+    - images/Thailand/THDI/THDI1.jpg
+    - images/Thailand/THDI/THDI2.jpg
+    - images/Thailand/THDI/THDI3.jpg
+
+    #- images/Thailand/THGP  -  DI PA SURE DITO
+    - images/Thailand/THGP/THGP1.jpg
+    - images/Thailand/THGP/THGP2.jpg
+    - images/Thailand/THGP/THGP3.jpg
+
+    #- images/Thailand/THPB
+    - images/Thailand/THPB/THPB1.jpeg
+    - images/Thailand/THPB/THPB2.jpg
+    - images/Thailand/THPB/THPB3.jpg
+
+    #- images/Thailand/THRB
+    - images/Thailand/THRB/THRB1.jpg
+    - images/Thailand/THRB/THRB2.webp
+    - images/Thailand/THRB/THRB3.jpg
+
+    #- images/Thailand/
+    - images/Thailand/THWA/THWA1.jpg
+    - images/Thailand/THWA/THWA2.jpeg
+    - images/Thailand/THWA/THWA3.jpg
+
+    #- images/Thailand/THWP
+    - images/Thailand/THWP/THWP1.jpeg
+    - images/Thailand/THWP/THWP2.jpg
+    - images/Thailand/THWP/THWP3.jpg
+
+    # TIMOR LANDMARKS
+    #- images/TimorLeste/TLABB/
+    - images/Timor-Leste/TLABB/TLABB1.jpg
+    - images/Timor-Leste/TLABB/TLABB2.jpg
+    - images/Timor-Leste/TLABB/TLABB3.webp
+
+    #- images/TimorLeste/TLAS/
+    - images/Timor-Leste/TLAS/TLAS1.jpg
+    - images/Timor-Leste/TLAS/TLAS2.jpeg
+    - images/Timor-Leste/TLAS/TLAS3.jpg
+
+    #- images/TimorLeste/TLB/
+    - images/Timor-Leste/TLB/TLB1.webp
+    - images/Timor-Leste/TLB/TLB2.jpg
+    - images/Timor-Leste/TLB/TLB2.webp
+
+    #- images/TimorLeste/TLCRD/
+    - images/Timor-Leste/TLCRD/TLCRD1.jpg
+    - images/Timor-Leste/TLCRD/TLCRD2.jpg
+    - images/Timor-Leste/TLCRD/TLCRD3.webp
+
+    #- images/TimorLeste/TLJI/
+    - images/Timor-Leste/TLJI/TLJI1.jpg
+    - images/Timor-Leste/TLJI/TLJI2.webp
+    - images/Timor-Leste/TLJI/TLJI3.webp
+
+    #- images/TimorLeste/TLMR/
+    - images/Timor-Leste/TLMR/TLMR1.jpg
+    - images/Timor-Leste/TLMR/TLMR2.jpg
+    - images/Timor-Leste/TLMR/TLMR3.jpg
+
+    #- images/TimorLeste/TLNKSNP/
+    - images/Timor-Leste/TLNKSNP/TLNKSNP1.jpg
+    - images/Timor-Leste/TLNKSNP/TLNKSNP2.jpg
+    - images/Timor-Leste/TLNKSNP/TLNKSNP3.jpg
+
+    #- images/TimorLeste/TLRM/
+    - images/Timor-Leste/TLRM/TLRM1.webp
+    - images/Timor-Leste/TLRM/TLRM2.jpg
+    - images/Timor-Leste/TLRM/TLRM3.avif
+
+    #- images/TimorLeste/TLSCC/
+    - images/Timor-Leste/TLSCC/TLSCC1.jpg
+    - images/Timor-Leste/TLSCC/TLSCC2.jpg
+    - images/Timor-Leste/TLSCC/TLSCC3.jpg
+
+    #- images/TimorLeste/TLVB/
+    - images/Timor-Leste/TLVB/TLVB1.jpg
+    - images/Timor-Leste/TLVB/TLVB2.jpg
+    - images/Timor-Leste/TLVB/TLVB3.jpg
+
+    # VIETNAME LANDMARKS
+    #- images/Vietnam/VNBNS/
+    - images/Vietnam/VNBNS/VNBNS1.jpg
+    - images/Vietnam/VNBNS/VNBNS2.jpg
+    - images/Vietnam/VNBNS/VNBNS3.jpg
+
+    #- images/Vietnam/VNCCT/
+    - images/Vietnam/VNCCT/VNCCT1.webp
+    - images/Vietnam/VNCCT/VNCCT2.jpg
+    - images/Vietnam/VNCCT/VNCCT3.jpg
+
+    #- images/Vietnam/VNHAAT/
+    - images/Vietnam/VNHAAT/VNHAAT1.jpg
+    - images/Vietnam/VNHAAT/VNHAAT2.webp
+    - images/Vietnam/VNHAAT/VNHAAT3.jpg
+
+    #- images/Vietnam/VNHIC/
+    - images/Vietnam/VNHIC/VNHIC1.jpg
+    - images/Vietnam/VNHIC/VNHIC2.webp
+    - images/Vietnam/VNHIC/VNHIC3.webp
+
+    #- images/Vietnam/VNHKL/
+    - images/Vietnam/VNHKL/VNHKL1.png
+    - images/Vietnam/VNHKL/VNHKL2.webp
+    - images/Vietnam/VNHKL/VNHKL3.avif
+
+    #- images/Vietnam/VNNMD/
+    - images/Vietnam/VNMD/VNMD1.jpg
+    - images/Vietnam/VNMD/VNMD2.jpg
+    - images/Vietnam/VNMD/VNMD3.jpg
+
+    #- images/Vietnam/VNMSS/
+    - images/Vietnam/VNMSS/VNMSS1.jpg
+    - images/Vietnam/VNMSS/VNMSS2.jpg
+    - images/Vietnam/VNMSS/VNMSS3.jpg
+
+    #- images/Vietnam/VNNB/
+    - images/Vietnam/VNNB/VNNB1.jpg
+    - images/Vietnam/VNNB/VNNB2.jpg
+    - images/Vietnam/VNNB/VNNB3.jpg
+
+    #- images/Vietnam/VNSRT/
+    - images/Vietnam/VNSRT/VNSRT1.jpg
+    - images/Vietnam/VNSRT/VNSRT2.jpg
+    - images/Vietnam/VNSRT/VNSRT3.jpg
+
+    #- images/Vietnam/VNWRM/
+    - images/Vietnam/VNWRM/VNWRM1.jpg
+    - images/Vietnam/VNWRM/VNWRM2.webp
+    - images/Vietnam/VNWRM/VNWRM3.jpg
+
+    # Dishes
+    # BRUNEI DISHES
+    - images/dishes/Brunei/BNAmbuyat/BNAmbuyat1.jpg
+    - images/dishes/Brunei/BNAmbuyat/BNAmbuyat2.jpeg
+    - images/dishes/Brunei/BNAmbuyat/BNAmbuyat3.jpg
+    - images/dishes/Brunei/BNSerunding/BNSerunding1.jpg
+    - images/dishes/Brunei/BNSerunding/BNSerunding2.jpg
+    - images/dishes/Brunei/BNSerunding/BNSerunding3.jpg
+    - images/dishes/Brunei/BNHatiB/BNHatiB1.jpg
+    - images/dishes/Brunei/BNHatiB/BNHatiB2.jpg
+    - images/dishes/Brunei/BNHatiB/BNHatiB3.jpg
+    - images/dishes/Brunei/BNNasiK/BNNasiK1.jpg
+    - images/dishes/Brunei/BNNasiK/BNNasiK2.jpg
+    - images/dishes/Brunei/BNNasiK/BNNasiK3.jpg
+    - images/dishes/Brunei/BNAyamP/BNAyamP1.jpg
+    - images/dishes/Brunei/BNAyamP/BNAyamP2.jpg
+    - images/dishes/Brunei/BNAyamP/BNAyamP3.jpg
+    - images/dishes/Brunei/BNSoto/BNSoto1.jpg
+    - images/dishes/Brunei/BNSoto/BNSoto2.jpg
+    - images/dishes/Brunei/BNSoto/BNSoto3.jpg
+    - images/dishes/Brunei/BNPulutP/BNPulutP1.jpg
+    - images/dishes/Brunei/BNPulutP/BNPulutP2.jpg
+    - images/dishes/Brunei/BNPulutP/BNPulutP3.jpg
+    - images/dishes/Brunei/BNKelupis/BNKelupis1.jpg
+    - images/dishes/Brunei/BNKelupis/BNKelupis2.jpg
+    - images/dishes/Brunei/BNKelupis/BNKelupis3.jpg
+    - images/dishes/Brunei/BNDMH/BNDMH1.jpg
+    - images/dishes/Brunei/BNDMH/BNDMH2.jpg
+    - images/dishes/Brunei/BNDMH/BNDMH3.jpg
+    - images/dishes/Brunei/BNWajid/BNWajid1.jpg
+    - images/dishes/Brunei/BNWajid/BNWajid2.jpg
+    - images/dishes/Brunei/BNWajid/BNWajid3.jpg
+
+    # CAMBODIA DISHES
+    - images/dishes/Cambodia/KHAmokT/KHAmokT1.jpg
+    - images/dishes/Cambodia/KHAmokT/KHAmokT2.png
+    - images/dishes/Cambodia/KHAmokT/KHAmokT3.jpg
+    - images/dishes/Cambodia/KHLokLak/KHLokLak1.png
+    - images/dishes/Cambodia/KHLokLak/KHLokLak2.jpg
+    - images/dishes/Cambodia/KHLokLak/KHLokLak3.jpg
+    - images/dishes/Cambodia/KHKhmerRC/KHKhmerRC1.jpg
+    - images/dishes/Cambodia/KHKhmerRC/KHKhmerRC2.jpg
+    - images/dishes/Cambodia/KHKhmerRC/KHKhmerRC3.jpg
+    - images/dishes/Cambodia/KHBSC/KHBSC1.jpg
+    - images/dishes/Cambodia/KHBSC/KHBSC2.jpg
+    - images/dishes/Cambodia/KHBSC/KHBSC3.jpg
+    - images/dishes/Cambodia/KHNBC/KHNBC1.jpg
+    - images/dishes/Cambodia/KHNBC/KHNBC2.jpg
+    - images/dishes/Cambodia/KHNBC/KHNBC3.jpg
+    - images/dishes/Cambodia/KHKuyT/KHKuyT1.jpg
+    - images/dishes/Cambodia/KHKuyT/KHKuyT2.jpg
+    - images/dishes/Cambodia/KHKuyT/KHKuyT3.jpg
+    - images/dishes/Cambodia/KHPrahok/KHPrahok1.jpg
+    - images/dishes/Cambodia/KHPrahok/KHPrahok2.jpg
+    - images/dishes/Cambodia/KHPrahok/KHPrahok3.jpg
+    - images/dishes/Cambodia/KHCKSK/KHCKSK1.jpg
+    - images/dishes/Cambodia/KHCKSK/KHCKSK2.jpg
+    - images/dishes/Cambodia/KHCKSK/KHCKSK3.jpg
+    - images/dishes/Cambodia/KHSamlorM/KHSamlorM1.jpg
+    - images/dishes/Cambodia/KHSamlorM/KHSamlorM2.jpg
+    - images/dishes/Cambodia/KHSamlorM/KHSamlorM3.jpg
+    - images/dishes/Cambodia/KHNumA/KHNumA1.jpg
+    - images/dishes/Cambodia/KHNumA/KHNumA2.jpg
+    - images/dishes/Cambodia/KHNumA/KHNumA3.jpg
+
+    # INDONESIA DISHES
+    - images/dishes/Indonesia/IDNGoreng/IDNGoreng1.jpg
+    - images/dishes/Indonesia/IDNGoreng/IDNGoreng2.jpg
+    - images/dishes/Indonesia/IDNGoreng/IDNGoreng3.jpg
+    - images/dishes/Indonesia/IDRendang/IDRendang1.jpg
+    - images/dishes/Indonesia/IDRendang/IDRendang2.jpg
+    - images/dishes/Indonesia/IDRendang/IDRendang3.jpg
+    - images/dishes/Indonesia/IDSatay/IDSatay1.jpg
+    - images/dishes/Indonesia/IDSatay/IDSatay2.jpg
+    - images/dishes/Indonesia/IDSatay/IDSatay3.jpg
+    - images/dishes/Indonesia/IDGado/IDGado1.jpg
+    - images/dishes/Indonesia/IDGado/IDGado2.jpg
+    - images/dishes/Indonesia/IDGado/IDGado3.jpg
+    - images/dishes/Indonesia/IDSotoA/IDSotoA1.jpg
+    - images/dishes/Indonesia/IDSotoA/IDSotoA2.jpg
+    - images/dishes/Indonesia/IDSotoA/IDSotoA3.jpg
+    - images/dishes/Indonesia/IDBakso/IDBakso1.jpg
+    - images/dishes/Indonesia/IDBakso/IDBakso2.jpg
+    - images/dishes/Indonesia/IDBakso/IDBakso3.jpg
+    - images/dishes/Indonesia/IDNPadang/IDNPadang1.jpg
+    - images/dishes/Indonesia/IDNPadang/IDNPadang2.jpg
+    - images/dishes/Indonesia/IDNPadang/IDNPadang3.jpg
+    - images/dishes/Indonesia/IDPempek/IDPempek1.jpg
+    - images/dishes/Indonesia/IDPempek/IDPempek2.jpg
+    - images/dishes/Indonesia/IDPempek/IDPempek3.jpg
+    - images/dishes/Indonesia/IDAyamG/IDAyamG1.jpg
+    - images/dishes/Indonesia/IDAyamG/IDAyamG2.jpg
+    - images/dishes/Indonesia/IDAyamG/IDAyamG3.jpg
+    - images/dishes/Indonesia/IDRawon/IDRawon1.jpg
+    - images/dishes/Indonesia/IDRawon/IDRawon2.jpg
+    - images/dishes/Indonesia/IDRawon/IDRawon3.jpeg
+
+    # LAOS DISHES
+    - images/dishes/Laos/LALaap/LALaap1.jpg
+    - images/dishes/Laos/LALaap/LALaap2.jpg
+    - images/dishes/Laos/LALaap/LALaap3.webp
+    - images/dishes/Laos/LAStickyR/LAStickyR1.jpg
+    - images/dishes/Laos/LAStickyR/LAStickyR2.jpg
+    - images/dishes/Laos/LAStickyR/LAStickyR3.jpg
+    - images/dishes/Laos/LATamMH/LATamMH1.jpg
+    - images/dishes/Laos/LATamMH/LATamMH2.jpg
+    - images/dishes/Laos/LATamMH/LATamMH3.jpg
+    - images/dishes/Laos/LAKhaoPS/LAKhaoPS1.jpg
+    - images/dishes/Laos/LAKhaoPS/LAKhaoPS2.webp
+    - images/dishes/Laos/LAKhaoPS/LAKhaoPS3.webp
+    - images/dishes/Laos/LAOrLam/LAOrLam1.jpg
+    - images/dishes/Laos/LAOrLam/LAOrLam2.jpg
+    - images/dishes/Laos/LAOrLam/LAOrLam3.jpg
+    - images/dishes/Laos/LASaiOua/LASaiOua1.jpg
+    - images/dishes/Laos/LASaiOua/LASaiOua2.png
+    - images/dishes/Laos/LASaiOua/LASaiOua3.jpg
+    - images/dishes/Laos/LAMokPa/LAMokPa1.jpg
+    - images/dishes/Laos/LAMokPa/LAMokPa2.jpg
+    - images/dishes/Laos/LAMokPa/LAMokPa3.jpg
+    - images/dishes/Laos/LAJeowB/LAJeowB1.jpg
+    - images/dishes/Laos/LAJeowB/LAJeowB2.jpg
+    - images/dishes/Laos/LAJeowB/LAJeowB3.jpg
+    - images/dishes/Laos/LAKhaoSL/LAKhaoSL1.jpg
+    - images/dishes/Laos/LAKhaoSL/LAKhaoSL2.jpg
+    - images/dishes/Laos/LAKhaoSL/LAKhaoSL3.jpg
+    - images/dishes/Laos/LAPingKa/LAPingKa1.jpg
+    - images/dishes/Laos/LAPingKa/LAPingKa2.jpg
+    - images/dishes/Laos/LAPingKa/LAPingKa3.jpg
+
+    # MALAYSIA DISHES
+    - images/dishes/Malaysia/MYNLemak/MYNLemak1.jpg
+    - images/dishes/Malaysia/MYNLemak/MYNLemak2.jpg
+    - images/dishes/Malaysia/MYNLemak/MYNLemak3.jpg
+    - images/dishes/Malaysia/MYCharKT/MYCharKT1.jpg
+    - images/dishes/Malaysia/MYCharKT/MYCharKT2.jpg
+    - images/dishes/Malaysia/MYCharKT/MYCharKT3.jpg
+    - images/dishes/Malaysia/MYSatay/MYSatay1.jpg
+    - images/dishes/Malaysia/MYSatay/MYSatay2.jpg
+    - images/dishes/Malaysia/MYSatay/MYSatay3.jpg
+    - images/dishes/Malaysia/MYRotiC/MYRotiC1.jpg
+    - images/dishes/Malaysia/MYRotiC/MYRotiC2.jpg
+    - images/dishes/Malaysia/MYRotiC/MYRotiC3.jpg
+    - images/dishes/Malaysia/MYLaksa/MYLaksa1.jpg
+    - images/dishes/Malaysia/MYLaksa/MYLaksa2.jpg
+    - images/dishes/Malaysia/MYLaksa/MYLaksa3.jpg
+    - images/dishes/Malaysia/MYRendang/MYRendang1.jpg
+    - images/dishes/Malaysia/MYRendang/MYRendang2.jpg
+    - images/dishes/Malaysia/MYRendang/MYRendang3.jpg
+    - images/dishes/Malaysia/MYNKandar/MYNKandar1.jpg
+    - images/dishes/Malaysia/MYNKandar/MYNKandar2.jpg
+    - images/dishes/Malaysia/MYNKandar/MYNKandar3.jpg
+    - images/dishes/Malaysia/MYHCR/MYHCR1.jpg
+    - images/dishes/Malaysia/MYHCR/MYHCR2.jpg
+    - images/dishes/Malaysia/MYHCR/MYHCR3.jpg
+    - images/dishes/Malaysia/MYMGoreng/MYMGoreng1.jpg
+    - images/dishes/Malaysia/MYMGoreng/MYMGoreng2.jpg
+    - images/dishes/Malaysia/MYMGoreng/MYMGoreng3.jpg
+    - images/dishes/Malaysia/MYCendol/MYCendol1.jpg
+    - images/dishes/Malaysia/MYCendol/MYCendol2.jpg
+    - images/dishes/Malaysia/MYCendol/MYCendol3.jpg
+
+    # MYANMAR DISHES
+    - images/dishes/Myanmar/MMMohinga/MMMohinga1.jpg
+    - images/dishes/Myanmar/MMMohinga/MMMohinga2.jpg
+    - images/dishes/Myanmar/MMMohinga/MMMohinga3.jpg
+    - images/dishes/Myanmar/MMLThoke/MMLThoke1.jpg
+    - images/dishes/Myanmar/MMLThoke/MMLThoke2.jpg
+    - images/dishes/Myanmar/MMLThoke/MMLThoke3.jpg
+    - images/dishes/Myanmar/MMShanN/MMShanN1.jpg
+    - images/dishes/Myanmar/MMShanN/MMShanN2.jpg
+    - images/dishes/Myanmar/MMShanN/MMShanN3.jpg
+    - images/dishes/Myanmar/MMONKS/MMONKS1.jpg
+    - images/dishes/Myanmar/MMONKS/MMONKS2.jpg
+    - images/dishes/Myanmar/MMONKS/MMONKS3.jpg
+    - images/dishes/Myanmar/MMNThoke/MMNThoke1.jpg
+    - images/dishes/Myanmar/MMNThoke/MMNThoke2.jpg
+    - images/dishes/Myanmar/MMNThoke/MMNThoke3.jpg
+    - images/dishes/Myanmar/MMMLYP/MMMLYP1.jpg
+    - images/dishes/Myanmar/MMMLYP/MMMLYP2.jpg
+    - images/dishes/Myanmar/MMMLYP/MMMLYP3.jpg
+    - images/dishes/Myanmar/MMKyayOh/MMKyayOh1.jpg
+    - images/dishes/Myanmar/MMKyayOh/MMKyayOh2.jpg
+    - images/dishes/Myanmar/MMKyayOh/MMKyayOh3.jpg
+    - images/dishes/Myanmar/MMNgapi/MMNgapi1.jpg
+    - images/dishes/Myanmar/MMNgapi/MMNgapi2.jpeg
+    - images/dishes/Myanmar/MMNgapi/MMNgapi3.jpg
+    - images/dishes/Myanmar/MMSiH/MMSiH1.jpg
+    - images/dishes/Myanmar/MMSiH/MMSiH2.jpg
+    - images/dishes/Myanmar/MMSiH/MMSiH3.jpg
+    - images/dishes/Myanmar/MMHHNwe/MMHHNwe1.jpg
+    - images/dishes/Myanmar/MMHHNwe/MMHHNwe2.jpg
+    - images/dishes/Myanmar/MMHHNwe/MMHHNwe3.jpg
+
+    # PHILIPPINES DISHES
+    - images/dishes/Philippines/PHAdobo/PHAdobo1.jpg
+    - images/dishes/Philippines/PHAdobo/PHAdobo2.jpg
+    - images/dishes/Philippines/PHAdobo/PHAdobo3.jpg
+    - images/dishes/Philippines/PHSinigang/PHSinigang1.jpg
+    - images/dishes/Philippines/PHSinigang/PHSinigang2.jpg
+    - images/dishes/Philippines/PHSinigang/PHSinigang3.jpg
+    - images/dishes/Philippines/PHLechon/PHLechon1.jpeg
+    - images/dishes/Philippines/PHLechon/PHLechon2.jpg
+    - images/dishes/Philippines/PHLechon/PHLechon3.jpg
+    - images/dishes/Philippines/PHKareK/PHKareK1.jpg
+    - images/dishes/Philippines/PHKareK/PHKareK2.jpg
+    - images/dishes/Philippines/PHKareK/PHKareK3.jpg
+    - images/dishes/Philippines/PHPancit/PHPancit1.jpg
+    - images/dishes/Philippines/PHPancit/PHPancit2.jpg
+    - images/dishes/Philippines/PHPancit/PHPancit3.jpg
+    - images/dishes/Philippines/PHSisig/PHSisig1.jpg
+    - images/dishes/Philippines/PHSisig/PHSisig2.jpg
+    - images/dishes/Philippines/PHSisig/PHSisig3.webp
+    - images/dishes/Philippines/PHBulalo/PHBulalo1.jpg
+    - images/dishes/Philippines/PHBulalo/PHBulalo2.jpg
+    - images/dishes/Philippines/PHBulalo/PHBulalo3.jpg
+    - images/dishes/Philippines/PHBExpress/PHBExpress1.jpg
+    - images/dishes/Philippines/PHBExpress/PHBExpress2.jpg
+    - images/dishes/Philippines/PHBExpress/PHBExpress3.jpg
+    - images/dishes/Philippines/PHLumpia/PHLumpia1.jpg
+    - images/dishes/Philippines/PHLumpia/PHLumpia2.jpg
+    - images/dishes/Philippines/PHLumpia/PHLumpia3.jpg
+    - images/dishes/Philippines/PHHaloH/PHHaloH1.jpg
+    - images/dishes/Philippines/PHHaloH/PHHaloH2.jpg
+    - images/dishes/Philippines/PHHaloH/PHHaloH3.jpg
+
+    # SINGAPORE DISHES
+    - images/dishes/Singapore/SGHCR/SGHCR1.jpg
+    - images/dishes/Singapore/SGHCR/SGHCR2.png
+    - images/dishes/Singapore/SGHCR/SGHCR3.jpg
+    - images/dishes/Singapore/SGLaksa/SGLaksa1.jpg
+    - images/dishes/Singapore/SGLaksa/SGLaksa2.jpg
+    - images/dishes/Singapore/SGLaksa/SGLaksa3.jpg
+    - images/dishes/Singapore/SGChiliC/SGChiliC1.jpg
+    - images/dishes/Singapore/SGChiliC/SGChiliC2.jpg
+    - images/dishes/Singapore/SGChiliC/SGChiliC3.jpg
+    - images/dishes/Singapore/SGCKT/SGCKT1.jpg
+    - images/dishes/Singapore/SGCKT/SGCKT2.jpg
+    - images/dishes/Singapore/SGCKT/SGCKT3.jpg
+    - images/dishes/Singapore/SGSatay/SGSatay1.jpg
+    - images/dishes/Singapore/SGSatay/SGSatay2.jpg
+    - images/dishes/Singapore/SGSatay/SGSatay3.jpg
+    - images/dishes/Singapore/SGBKT/SGBKT1.jpg
+    - images/dishes/Singapore/SGBKT/SGBKT2.jpg
+    - images/dishes/Singapore/SGBKT/SGBKT3.jpg
+    - images/dishes/Singapore/SGKToast/SGKToast1.jpg
+    - images/dishes/Singapore/SGKToast/SGKToast2.jpeg
+    - images/dishes/Singapore/SGKToast/SGKToast3.jpg
+    - images/dishes/Singapore/SGRotiP/SGRotiP1.jpg
+    - images/dishes/Singapore/SGRotiP/SGRotiP2.jpg
+    - images/dishes/Singapore/SGRotiP/SGRotiP3.jpg
+    - images/dishes/Singapore/SGFHCurry/SGFHCurry1.jpg
+    - images/dishes/Singapore/SGFHCurry/SGFHCurry2.jpg
+    - images/dishes/Singapore/SGFHCurry/SGFHCurry3.jpg
+    - images/dishes/Singapore/SGHMee/SGHMee1.jpg
+    - images/dishes/Singapore/SGHMee/SGHMee2.jpg
+    - images/dishes/Singapore/SGHMee/SGHMee3.jpg
+
+# THAILAND DISHES
+    - images/dishes/Thailand/THBNoodles/THBNoodles1.jpg
+    - images/dishes/Thailand/THBNoodles/THBNoodles2.jpg
+    - images/dishes/Thailand/THBNoodles/THBNoodles3.jpg
+    - images/dishes/Thailand/THGCurry/THGCurry1.jpg
+    - images/dishes/Thailand/THGCurry/THGCurry2.jpg
+    - images/dishes/Thailand/THGCurry/THGCurry3.jpg
+    - images/dishes/Thailand/THKPad/THKPad1.jpg
+    - images/dishes/Thailand/THKPad/THKPad2.jpg
+    - images/dishes/Thailand/THKPad/THKPad3.jpg
+    - images/dishes/Thailand/THMCurry/THMCurry1.jpg
+    - images/dishes/Thailand/THMCurry/THMCurry2.jpg
+    - images/dishes/Thailand/THMCurry/THMCurry3.jpg
+    - images/dishes/Thailand/THMSR/THMSR1.jpg
+    - images/dishes/Thailand/THMSR/THMSR2.jpg
+    - images/dishes/Thailand/THMSR/THMSR3.jpg
+    - images/dishes/Thailand/THPCurry/THPCurry1.jpg
+    - images/dishes/Thailand/THPCurry/THPCurry2.jpg
+    - images/dishes/Thailand/THPCurry/THPCurry3.jpg
+    - images/dishes/Thailand/THPKP/THPKP1.jpg
+    - images/dishes/Thailand/THPKP/THPKP2.jpg
+    - images/dishes/Thailand/THPKP/THPKP3.jpg
+    - images/dishes/Thailand/THPThai/THPThai1.jpg
+    - images/dishes/Thailand/THPThai/THPThai2.jpg
+    - images/dishes/Thailand/THPThai/THPThai3.jpg
+    - images/dishes/Thailand/THSTam/THSTam1.jpg
+    - images/dishes/Thailand/THSTam/THSTam2.jpg
+    - images/dishes/Thailand/THSTam/THSTam3.jpg
+    - images/dishes/Thailand/THTYum/THTYum1.jpg
+    - images/dishes/Thailand/THTYum/THTYum2.jpg
+    - images/dishes/Thailand/THTYum/THTYum3.jpg
+
+# TimorLeste DISHES
+    - images/dishes/TimorLeste/TLBDaan/TLBDaan1.webp
+    - images/dishes/TimorLeste/TLBDaan/TLBDaan2.jpg
+    - images/dishes/TimorLeste/TLBDaan/TLBDaan3.jpg
+    - images/dishes/TimorLeste/TLCal/TLCal1.jpg
+    - images/dishes/TimorLeste/TLCal/TLCal2.jpg
+    - images/dishes/TimorLeste/TLCal/TLCal3.jpg
+    - images/dishes/TimorLeste/TLCassava/TLCassava1.jpg
+    - images/dishes/TimorLeste/TLCassava/TLCassava2.jpg
+    - images/dishes/TimorLeste/TLCassava/TLCassava3.jpg
+    - images/dishes/TimorLeste/TLCPStew/TLCPStew1.jpg
+    - images/dishes/TimorLeste/TLCPStew/TLCPStew2.jpg
+    - images/dishes/TimorLeste/TLCPStew/TLCPStew3.jpg
+    - images/dishes/TimorLeste/TLEelS/TLEelS1.jpg
+    - images/dishes/TimorLeste/TLEelS/TLEelS2.jpg
+    - images/dishes/TimorLeste/TLEelS/TLEelS3.jpg
+    - images/dishes/TimorLeste/TLFeij/TLFeij1.avif
+    - images/dishes/TimorLeste/TLFeij/TLFeij2.jpg
+    - images/dishes/TimorLeste/TLFeij/TLFeij3.jpg
+    - images/dishes/TimorLeste/TLGFish/TLGFish1.jpg
+    - images/dishes/TimorLeste/TLGFish/TLGFish2.jpg
+    - images/dishes/TimorLeste/TLGFish/TLGFish3.jpg
+    - images/dishes/TimorLeste/TLIkanS/TLIkanS1.jpg
+    - images/dishes/TimorLeste/TLIkanS/TLIkanS2.jpg
+    - images/dishes/TimorLeste/TLIkanS/TLIkanS3.jpg
+    - images/dishes/TimorLeste/TLKatupa/TLKatupa1.jpg
+    - images/dishes/TimorLeste/TLKatupa/TLKatupa2.jpg
+    - images/dishes/TimorLeste/TLKatupa/TLKatupa3.jpg
+    - images/dishes/TimorLeste/TLTukir/TLTukir1.jpg
+    - images/dishes/TimorLeste/TLTukir/TLTukir2.jpg
+    - images/dishes/TimorLeste/TLTukir/TLTukir3.jpg
+
+# VIETNAM DISHES
+    - images/dishes/Vietnam/VNBBHue/VNBBHue1.jpg
+    - images/dishes/Vietnam/VNBBHue/VNBBHue2.jpg
+    - images/dishes/Vietnam/VNBBHue/VNBBHue3.jpg
+    - images/dishes/Vietnam/VNBCha/VNBCha1.webp
+    - images/dishes/Vietnam/VNBCha/VNBCha2.jpg
+    - images/dishes/Vietnam/VNBCha/VNBCha3.jpg
+    - images/dishes/Vietnam/VNBMi/VNBMi1.jpg
+    - images/dishes/Vietnam/VNBMi/VNBMi2.jpg
+    - images/dishes/Vietnam/VNBMi/VNBMi3.jpg
+    - images/dishes/Vietnam/VNBXeo/VNBXeo1.jpg
+    - images/dishes/Vietnam/VNBXeo/VNBXeo2.jpg
+    - images/dishes/Vietnam/VNBXeo/VNBXeo3.jpg
+    - images/dishes/Vietnam/VNChe/VNChe1.jpg
+    - images/dishes/Vietnam/VNChe/VNChe2.jpg
+    - images/dishes/Vietnam/VNChe/VNChe3.jpg
+    - images/dishes/Vietnam/VNCLau/VNCLau1.jpg
+    - images/dishes/Vietnam/VNCLau/VNCLau2.jpg
+    - images/dishes/Vietnam/VNCLau/VNCLau3.jpg
+    - images/dishes/Vietnam/VNCTam/VNCTam1.jpg
+    - images/dishes/Vietnam/VNCTam/VNCTam2.jpg
+    - images/dishes/Vietnam/VNCTam/VNCTam3.jpg
+    - images/dishes/Vietnam/VNGoiC/VNGoiC1.jpg
+    - images/dishes/Vietnam/VNGoiC/VNGoiC2.jpg
+    - images/dishes/Vietnam/VNGoiC/VNGoiC3.jpg
+    - images/dishes/Vietnam/VNHuT/VNHuT1.jpg
+    - images/dishes/Vietnam/VNHuT/VNHuT2.jpg
+    - images/dishes/Vietnam/VNHuT/VNHuT3.jpg
+    - images/dishes/Vietnam/VNPho/VNPho1.png
+    - images/dishes/Vietnam/VNPho/VNPho2.jpg
+    - images/dishes/Vietnam/VNPho/VNPho3.webp
