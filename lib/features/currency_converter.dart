@@ -68,23 +68,39 @@ class _CurrencyConverterScreenState extends State<CurrencyConverterScreen> {
     'Brunei', 'Cambodia', 'Indonesia', 'Laos', 'Malaysia',
     'Myanmar', 'Philippines', 'Singapore', 'Thailand', 'Timor-Leste', 'Vietnam'
   ];
-  // Inside _CurrencyConverterScreenState
 
-@override
-void initState() {
-  super.initState();
-  _shoppingBox = Hive.box<ShoppingList>('shopping_lists');
-  _shoppingLists = _shoppingBox.values.toList(); // This is the "Load"
-}
+  // Accurate baseline exchange rates relative to USD
+  final Map<String, double> _ratesToUSD = {
+    'USD': 1.0,
+    'THB': 32.74,
+    'SGD': 1.27,
+    'MYR': 4.45,
+    'IDR': 15500.0,
+    'VND': 25400.0,
+    'PHP': 61.58,
+    'BND': 1.27,
+    'KHR': 4050.0,
+    'LAK': 22500.0,
+    'MMK': 2100.0,
+  };
 
-// 2. The Sync/Save function
-void _syncHive() async {
-  await _shoppingBox.clear();
-  await _shoppingBox.addAll(_shoppingLists);
-  setState(() {
-    debugPrint("Database Synced: ${_shoppingBox.length} lists saved.");
-  });
-}
+  @override
+  void initState() {
+    super.initState();
+    _shoppingBox = Hive.box<ShoppingList>('shopping_lists');
+    _shoppingLists = _shoppingBox.values.toList();
+    
+    // Automatically recalculate when typing in the text field
+    _amountController.addListener(_convert);
+  }
+
+  void _syncHive() async {
+    await _shoppingBox.clear();
+    await _shoppingBox.addAll(_shoppingLists);
+    setState(() {
+      debugPrint("Database Synced: ${_shoppingBox.length} lists saved.");
+    });
+  }
 
   @override
   void dispose() {
@@ -94,8 +110,22 @@ void _syncHive() async {
 
   void _convert() {
     final input = double.tryParse(_amountController.text);
+    if (input == null) {
+      setState(() {
+        _numericResult = null;
+      });
+      return;
+    }
+
+    double fromRate = _ratesToUSD[_fromCurrency] ?? 1.0;
+    double toRate = _ratesToUSD[_toCurrency] ?? 1.0;
+
+    // Convert input to USD base first, then to the target currency
+    double amountInUSD = input / fromRate;
+    double finalResult = amountInUSD * toRate;
+
     setState(() {
-      _numericResult = input != null ? input : null;
+      _numericResult = finalResult;
     });
   }
 
@@ -536,7 +566,7 @@ void _syncHive() async {
     );
   }
 
-  Widget _currencyDropdown(String currentValue, ValueChanged<String?> onChanged) {
+ Widget _currencyDropdown(String currentValue, ValueChanged<String?> onChanged) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
@@ -552,7 +582,10 @@ void _syncHive() async {
         style: const TextStyle(color: Colors.white, fontSize: 16),
         isDense: true,
         items: _currencies.map((c) => DropdownMenuItem(value: c, child: Text(c))).toList(),
-        onChanged: onChanged,
+        onChanged: (val) {
+          onChanged(val);
+          _convert(); // Recalculate instantly when dropdown changes
+        },
       ),
     );
   }

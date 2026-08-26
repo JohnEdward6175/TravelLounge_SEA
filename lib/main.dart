@@ -16,18 +16,14 @@ import 'dataHandler/bag_data.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // --- HIVE INITIALIZATION ---
   await Hive.initFlutter();
 
-  // 1. Register adapters FIRST
-  // Ensure these match the @HiveType(typeId: X) in your model classes
   if (!Hive.isAdapterRegistered(0)) {
     Hive.registerAdapter(DiaryEntryAdapter());
   }
   if (!Hive.isAdapterRegistered(1)) {
     Hive.registerAdapter(UserProfileAdapter());
   }
-  // Registering Document adapters
   if (!Hive.isAdapterRegistered(5)) Hive.registerAdapter(DocumentItemAdapter());
   if (!Hive.isAdapterRegistered(6)) Hive.registerAdapter(DocumentListAdapter());
 
@@ -36,9 +32,7 @@ void main() async {
 
   if (!Hive.isAdapterRegistered(7)) Hive.registerAdapter(BagItemAdapter());
   if (!Hive.isAdapterRegistered(8)) Hive.registerAdapter(BagCategoryAdapter());
-  // if (!Hive.isAdapterRegistered(9)) Hive.registerAdapter(DiaryEntryAdapter());
-  
-  // 2. Open boxes SECOND
+
   if (!Hive.isBoxOpen('entries')) {
     await Hive.openBox<DiaryEntry>('entries');
   }
@@ -47,10 +41,9 @@ void main() async {
   }
     await Hive.openBox<DocumentList>('myDocuments');
   if (!kIsWeb) {
-    // await MobileAds.instance.initialize();
+    // 
   }
 
-    // 3. Open all boxes
   await Hive.openBox<BagCategory>('myBags');
   await Hive.openBox<DiaryEntry>('entries');
   await Hive.openBox<DocumentList>('myDocuments');

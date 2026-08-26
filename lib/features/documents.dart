@@ -158,7 +158,6 @@ class _DocumentsPageState extends State<DocumentsPage> {
     String? localImagePath = item?.imagePath;
     final ImagePicker picker = ImagePicker();
 
-    // Update this in your code:
 Future<void> pickNewImage(Function setDialogState) async {
   final XFile? pickedFile = await picker.pickImage(source: ImageSource.gallery);
   if (pickedFile != null) {

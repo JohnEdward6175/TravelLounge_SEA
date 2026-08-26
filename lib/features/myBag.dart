@@ -11,7 +11,6 @@ class MyBagPage extends StatefulWidget {
 }
 
 class _MyBagPageState extends State<MyBagPage> {
-  // 1. Hive Box and Search Controllers
   late Box<BagCategory> bagBox;
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = "";
@@ -24,7 +23,6 @@ class _MyBagPageState extends State<MyBagPage> {
   @override
   void initState() {
     super.initState();
-    // Initialize the box reference
     bagBox = Hive.box<BagCategory>('myBags');
   }
 
@@ -47,7 +45,6 @@ class _MyBagPageState extends State<MyBagPage> {
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              /// 🔵 BLUE BANNER
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 decoration: const BoxDecoration(
@@ -71,7 +68,6 @@ class _MyBagPageState extends State<MyBagPage> {
                 ),
               ),
 
-              /// 📝 INPUT FIELDS
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Column(
@@ -202,10 +198,8 @@ class _MyBagPageState extends State<MyBagPage> {
 
   @override
   Widget build(BuildContext context) {
-    // 2. Logic: Get data and Apply Search Filter
     final List<BagCategory> allBags = bagBox.values.toList();
     
-    // We need to keep track of the original index for deleting/editing correctly
     final List<MapEntry<int, BagCategory>> filteredEntries = allBags
         .asMap()
         .entries
@@ -220,7 +214,6 @@ class _MyBagPageState extends State<MyBagPage> {
       backgroundColor: Colors.grey.shade50,
       body: Column(
         children: [
-          /// 🔵 HEADER WITH GRADIENT AND FUNCTIONAL SEARCH
           Container(
             padding: const EdgeInsets.fromLTRB(24, 48, 24, 24),
             decoration: const BoxDecoration(

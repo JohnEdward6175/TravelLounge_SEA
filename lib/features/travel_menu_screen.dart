@@ -3,18 +3,15 @@ import '../dataHandler/country_details.dart';
 import 'package:my_app/widgets/menu_panel.dart';
 import 'package:my_app/widgets/landmark_panel.dart';
 import 'documents.dart';
-// import 'package:my_app/map.dart';
 import 'package:my_app/models/travel_models.dart';
 import 'package:my_app/widgets/dishPanel.dart';
 
-// import 'dataHandler/airports_data.dart'; // Path to your airport map
 import 'package:my_app/globals.dart' as globals;
 import 'package:my_app/dataHandler/airports_data.dart';
 import 'package:my_app/widgets/airportPanel.dart';
 
 import 'package:my_app/mapcode/main_map.dart';
 
-//new weather
 import 'package:my_app/widgets/weather_card.dart';
 
 class TravelMenuScreen extends StatefulWidget {
@@ -50,11 +47,9 @@ class _TravelMenuScreenState extends State<TravelMenuScreen> {
           ? Padding(
               padding: const EdgeInsets.only(
                 top: 30.0,
-              ), // Moves it down from the very top edge
+              ),
               child: FloatingActionButton(
-                // Set to false or remove 'mini' to make it standard (bigger) size
                 mini: false,
-                // This shape makes it a perfect circle
                 shape: const CircleBorder(),
                 backgroundColor: Colors.yellow,
                 foregroundColor: Colors.white,
@@ -62,17 +57,16 @@ class _TravelMenuScreenState extends State<TravelMenuScreen> {
                   globals.isFromChat = false;
                   Navigator.pop(context);
                 },
-                child: const Icon(Icons.chat, size: 28), // Increased icon size
+                child: const Icon(Icons.chat, size: 28), 
               ),
             )
           : null,
 
-      backgroundColor: const Color(0xFFF8FAF8), // Subtle off-white for contrast
+      backgroundColor: const Color(0xFFF8FAF8), 
       body: Stack(
         children: [
           Column(
             children: [
-              /// 🟢 Search Header Bar
               Container(
                 padding: const EdgeInsets.fromLTRB(24, 48, 24, 24),
                 decoration: const BoxDecoration(
@@ -130,7 +124,6 @@ class _TravelMenuScreenState extends State<TravelMenuScreen> {
                     ),
                     const SizedBox(height: 24),
  SearchAnchor(
-  // This explicitly prevents it from taking over the full screen
 viewElevation: 8,
   viewShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
   viewConstraints: const BoxConstraints(
@@ -147,7 +140,6 @@ viewElevation: 8,
       onTap: () => controller.openView(),
       onChanged: (_) => controller.openView(),
       leading: const Icon(Icons.search, color: Colors.grey),
-      // ... keep your existing trailing/shape logic
     );
   },
   
@@ -180,7 +172,6 @@ viewElevation: 8,
                     _buildWeatherCard(selectedCountry.weather),
                     const SizedBox(height: 20),
 
-                    // About Countries =================================
                     StyledDropdown(
                       key: ValueKey("${selectedCountry.name}_about"),
                       title: "About ${selectedCountry.name}",
@@ -190,7 +181,6 @@ viewElevation: 8,
                       icon: Icons.auto_stories_outlined,
                     ),
 
-                    // airports===============================
                     Container(
                       margin: const EdgeInsets.only(bottom: 12),
                       decoration: BoxDecoration(
@@ -219,7 +209,7 @@ viewElevation: 8,
                             Icons.local_airport_rounded,
                             color: Color(
                               0xFF388E3C,
-                            ), // Matching your green theme
+                            ), 
                           ),
                           title: const Text(
                             "AIRPORTS",
@@ -267,7 +257,6 @@ viewElevation: 8,
                       ),
                     ),
 
-                    //rules ==============================
                     StyledDropdown(
                       key: ValueKey("${selectedCountry.name}_rules"),
                       title: "Country Rules",
@@ -275,7 +264,6 @@ viewElevation: 8,
                       icon: Icons.gavel_outlined,
                     ),
 
-                    //dishes  ========================================================
                     Container(
                       margin: const EdgeInsets.only(bottom: 12),
                       decoration: BoxDecoration(
@@ -330,7 +318,6 @@ viewElevation: 8,
 
                     const SizedBox(height: 24),
 
-                    /// 📸 REDESIGNED LANDMARKS SECTION (Now Expandable)
                     Container(
                       margin: const EdgeInsets.only(bottom: 12),
                       decoration: BoxDecoration(
@@ -345,7 +332,6 @@ viewElevation: 8,
                         ],
                       ),
                       child: Theme(
-                        // This removes the default expansion lines for a cleaner look
                         data: Theme.of(
                           context,
                         ).copyWith(dividerColor: Colors.transparent),
@@ -373,10 +359,10 @@ viewElevation: 8,
                           children: [
                             Container(
                               color: Colors
-                                  .white, // Background for the revealed content
+                                  .white,
                               constraints: const BoxConstraints(
                                 maxHeight: 450,
-                              ), // Limits height so it stays scrollable
+                              ), 
                               child: LandmarkPanel(
                                 landmarks: selectedCountry.landmarks,
                                 bookmarkedLandmarks: bookmarkedLandmarks,
@@ -390,7 +376,6 @@ viewElevation: 8,
 
                     const SizedBox(height: 12),
 
-                    /// 🎫 REDESIGNED TRAVEL REQUIREMENTS BUTTON
                     _buildGradientButton(
                       context: context,
                       label: "TRAVEL REQUIREMENTS",
@@ -411,7 +396,6 @@ viewElevation: 8,
             ],
           ),
 
-          /// 📍 Floating Action Button
           Positioned(
             right: 20,
             bottom: 30,
@@ -441,8 +425,6 @@ viewElevation: 8,
       ),
     );
   }
-
-  /// --- Helper Widgets for Stylized UI ---
 
   Widget _buildWeatherCard(Weather weather) {
     return WeatherCard(weather: weather);
@@ -532,7 +514,6 @@ viewElevation: 8,
   }
 }
 
-/// --- Styled Dropdown Component ---
 class StyledDropdown extends StatelessWidget {
   final String title;
   final List<String> items;
