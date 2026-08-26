@@ -5,13 +5,12 @@ workflows:
     instance_type: mac_mini_m2
     environment:
       flutter: stable
-      xcode: 15.4
-      macos_setting: macos_ventura
+      xcode: latest
     scripts:
       - name: Install dependencies
         script: |
           flutter pub get
-      - name: Install CocoaPods dependencies
+      - name: Clean and Install Pods with compatible workaround
         script: |
           cd ios
           pod install
