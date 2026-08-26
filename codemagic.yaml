@@ -8,6 +8,8 @@ workflows:
       xcode: latest
     scripts:
       - name: Install dependencies
+
+      
         script: |
           flutter pub get
       - name: Prepare iOS build environment
