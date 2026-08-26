@@ -5,15 +5,12 @@ workflows:
     instance_type: mac_mini_m2
     environment:
       flutter: stable
-      xcode: latest
+      xcode: 15.4
+      macos_setting: macos_ventura
     scripts:
       - name: Install dependencies
         script: |
           flutter pub get
-      - name: Purge broken CocoaPods and install 1.15.2
-        script: |
-          gem uninstall cocoapods -aIx || true
-          gem install cocoapods -v 1.15.2
       - name: Install CocoaPods dependencies
         script: |
           cd ios
