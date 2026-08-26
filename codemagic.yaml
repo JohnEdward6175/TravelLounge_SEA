@@ -10,11 +10,6 @@ workflows:
       - name: Install dependencies
         script: |
           flutter pub get
-      - name: Clean and Install Pods with compatible workaround
-        script: |
-          cd ios
-          pod install
-          cd ..
       - name: Build iOS simulator package
         script: |
           flutter build ios --debug --simulator --no-codesign
