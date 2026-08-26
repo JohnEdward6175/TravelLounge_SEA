@@ -10,13 +10,14 @@ workflows:
       - name: Install dependencies
         script: |
           flutter pub get
-      - name: Force stable CocoaPods version
+      - name: Purge broken CocoaPods and install 1.15.2
         script: |
+          gem uninstall cocoapods -aIx || true
           gem install cocoapods -v 1.15.2
       - name: Install CocoaPods dependencies
         script: |
           cd ios
-          pod _1.15.2_ install
+          pod install
           cd ..
       - name: Build iOS simulator package
         script: |
