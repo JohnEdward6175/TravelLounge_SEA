@@ -10,6 +10,10 @@ workflows:
       - name: Install dependencies
         script: |
           flutter pub get
+      - name: Prepare iOS build environment
+        script: |
+          find . -name "Podfile.lock" -delete
+          flutter precache --ios
       - name: Build iOS simulator package
         script: |
           flutter build ios --debug --simulator --no-codesign
