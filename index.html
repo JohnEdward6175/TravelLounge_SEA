@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TravelLounge SEA | Explore Southeast Asia</title>
+
 
     <style>
 
@@ -17,10 +19,16 @@
         }
 
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+
         body {
             background: #f4f9ff;
             color: #333;
         }
+
 
 
         /* Header */
@@ -66,6 +74,10 @@
             background: #023e8a;
             padding: 15px;
             text-align: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
         }
 
@@ -122,12 +134,12 @@
 
 
 
-        /* Button */
+        /* Buttons */
 
         .btn {
 
             display: inline-block;
-            margin-top: 30px;
+            margin: 30px 10px 0;
             padding: 15px 35px;
             background: #0077b6;
             color: white;
@@ -167,6 +179,15 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+            transition: transform 0.3s;
+
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-10px);
 
         }
 
@@ -212,6 +233,14 @@
         }
 
 
+        footer a {
+
+            color: #90e0ef;
+            text-decoration: none;
+
+        }
+
+
 
 
 
@@ -240,7 +269,9 @@
 
     </style>
 
+
 </head>
+
 
 
 
@@ -250,7 +281,8 @@
 
 
 
-<header>
+<header id="home">
+
 
     <h1>
         TravelLounge SEA
@@ -261,7 +293,9 @@
         Discover beautiful destinations across Southeast Asia
     </p>
 
+
 </header>
+
 
 
 
@@ -269,7 +303,8 @@
 
 <nav>
 
-    <a href="index.html">
+
+    <a href="#home">
         Home
     </a>
 
@@ -283,7 +318,9 @@
         Terms of Service
     </a>
 
+
 </nav>
+
 
 
 
@@ -299,6 +336,7 @@
     </h2>
 
 
+
     <p>
         Your gateway to unforgettable adventures.
         Explore breathtaking beaches, historical landmarks,
@@ -308,12 +346,21 @@
 
 
 
+
     <a href="privacy.html" class="btn">
-        View Privacy Policy
+        Privacy Policy
     </a>
 
 
+
+    <a href="terms.html" class="btn">
+        Terms of Service
+    </a>
+
+
+
 </section>
+
 
 
 
@@ -399,6 +446,7 @@
 
 
 
+
 <footer>
 
 
@@ -406,6 +454,22 @@
         © 2026 TravelLounge SEA.
         All Rights Reserved.
     </p>
+
+
+    <p>
+
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
+
+        |
+
+        <a href="terms.html">
+            Terms of Service
+        </a>
+
+    </p>
+
 
 
 </footer>
